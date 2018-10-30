@@ -17,7 +17,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    raise params.inspect
     @post = Post.new(author_id: params[:author_id])
   end
 
