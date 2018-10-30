@@ -4130,3 +4130,14 @@ Processing by PostsController#new as HTML
   Rendered posts/_form.html.erb (1.7ms)
   Rendered posts/new.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 126.2.63.14 at 2018-10-30 23:09:45 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e4MaFp0oUfZLF9pjGCW4aKHzfy9C2uHYpvAdDqPCAuqHD4M2vCcKMzUKCtFUzezFM4P6nQbVUppmZlhIVrItfA==", "post"=>{"title"=>"New post", "description"=>"Post made from author 1's page", "author_id"=>"1"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "New Post"], ["description", "Post made from author 1's page"], ["author_id", 1], ["created_at", "2018-10-30 23:09:45.523363"], ["updated_at", "2018-10-30 23:09:45.523363"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://178.128.14.28:42951/posts/6
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
