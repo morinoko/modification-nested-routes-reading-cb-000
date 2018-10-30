@@ -4101,3 +4101,32 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/5/edit" for 126.2.63.14 at 2018-10-30 23:08:14 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/_form.html.erb (2.2ms)
+  Rendered posts/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/1" for 126.2.63.14 at 2018-10-30 23:08:31 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/1/posts/new" for 126.2.63.14 at 2018-10-30 23:08:33 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendered posts/_form.html.erb (1.7ms)
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
