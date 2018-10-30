@@ -4072,3 +4072,32 @@ Processing by PostsController#create as HTML
   [1m[35m (1.5ms)[0m  commit transaction
 Redirected to http://178.128.14.28:42951/posts/4
 Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/4" for 126.2.63.14 at 2018-10-30 23:06:26 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 126.2.63.14 at 2018-10-30 23:06:26 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S7S3l/2zOnYbyCy7ZlQbrG52LgmQEeAFfHL3uukupjS3OC633Lxhs2XV/AkqvE8B/Aaru9QeU0e85LL8HF6Jog==", "post"=>{"title"=>"New post for author", "description"=>"this post was made from the author page"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "New Post For Author"], ["description", "this post was made from the author page"], ["created_at", "2018-10-30 23:06:26.647684"], ["updated_at", "2018-10-30 23:06:26.647684"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://178.128.14.28:42951/posts/5
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/5" for 126.2.63.14 at 2018-10-30 23:06:26 +0000
+Cannot render console from 126.2.63.14! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
